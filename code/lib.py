@@ -31,7 +31,6 @@ class DataSet:
     # load class labels from the labels file
     labels_file = open(label_file_path)
     labels = [int(line.strip()) for line in labels_file]
-    
     # load gene expression data from the matrix file
     matrix_file = open(matrix_file_path)
     samples = []
@@ -51,7 +50,8 @@ class DataSet:
     train_size = int(len(samples) * 0.66) # 2/3 of the data
     self.train = samples[:train_size]
     self.test = samples[train_size:]
-
+    self.samples=samples;
+    self.labels=labels; 
   # returns the samples in the training set
   def get_train_set(self):
     return self.train
