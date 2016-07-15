@@ -3,6 +3,7 @@ import random
 import codecs
 from IPython.display import display
 from IPython.display import HTML
+import numpy as np
 
 class Sample:
 
@@ -51,7 +52,8 @@ class DataSet:
     self.train = samples[:train_size]
     self.test = samples[train_size:]
     self.samples=samples;
-    self.labels=labels; 
+    self.labels=labels;
+    self.all_data=np.loadtxt(matrix_file_path)
   # returns the samples in the training set
   def get_train_set(self):
     return self.train
