@@ -64,3 +64,10 @@ def evaluate_results(classified_samples):
   total = len(correct)
   acc = (correct.count(1) * 100.0) / total
   print 'Accuracy: %.2f%%' % acc
+
+
+
+def kmeans(data,k,max_iter):
+   #If you want to implement your K-means clustering algorithm from scratch, put your code here!
+   
+   pass
